@@ -55,51 +55,67 @@
     <a href="https://codepen.io/hexagoncircle/pen/joqYEj" target="_blank">Source</a>
   </header>
   -->
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="hover-area"></div>
-  <div class="star-field">
-    <div class="stars stars-sm"></div>
-    <div class="stars stars-md"></div>
-    <div class="stars stars-lg"></div>
-  </div>
-  <div class="ship">
-    <div class="wrapper">
-      <div class="body side left"></div>
-      <div class="body main">
-        <div class="wing left"></div>
-        <div class="wing right"></div>
-        <div class="booster"></div>
-        <div class="exhaust"></div>
-      </div>
-      <div class="body side right"></div>
+  <main>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="hover-area"></div>
+    <div class="star-field">
+      <div class="stars stars-sm"></div>
+      <div class="stars stars-md"></div>
+      <div class="stars stars-lg"></div>
     </div>
-  </div>
+    <div class="ship">
+      <div class="wrapper">
+        <div class="body side left"></div>
+        <div class="body main">
+          <div class="wing left"></div>
+          <div class="wing right"></div>
+          <div class="booster"></div>
+          <div class="exhaust"></div>
+        </div>
+        <div class="body side right"></div>
+      </div>
+    </div>
+  </main>
+  <footer class="bottom_toolbar">
+    <a href="https://blazed.space/">Home</a>
+    <button id="fullscr">Go Fullscreen</button>
+  </footer>
+  <script>
+    let fullscreen;
+    let fsEnter = document.getElementById('fullscr');
+    fsEnter.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (!fullscreen) {
+            fullscreen = true;
+            document.documentElement.requestFullscreen();
+            fsEnter.innerHTML = "Exit Fullscreen";
+        }
+        else {
+            fullscreen = false;
+            document.exitFullscreen();
+            fsEnter.innerHTML = "Go Fullscreen";
+        }
+    });
+  </script>
+  <script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
 
-  <section id="blz-js">
-    <noscript>
-      <p>
-        Please enable JavaScript to continue using this application.
-      </p>
-    </noscript>
-    <script src="//instant.page/5.1.1" type="module" integrity="sha384-MWfCL6g1OTGsbSwfuMHc8+8J2u71/LA8dzlIN3ycajckxuZZmF+DNjdm7O6H3PSq"></script>
-  </section>
 </body>
 </html>

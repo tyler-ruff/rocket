@@ -47,90 +47,6 @@ body {
   flex-grow: 1;
   z-index: 3;
 }
-.hover-area:nth-child(1):hover ~ .ship, .hover-area:nth-child(1):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(-90deg);
-}
-.hover-area:nth-child(2):hover ~ .ship, .hover-area:nth-child(2):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(-80deg);
-}
-.hover-area:nth-child(3):hover ~ .ship, .hover-area:nth-child(3):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(-70deg);
-}
-.hover-area:nth-child(4):hover ~ .ship, .hover-area:nth-child(4):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(-60deg);
-}
-.hover-area:nth-child(5):hover ~ .ship, .hover-area:nth-child(5):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(-50deg);
-}
-.hover-area:nth-child(6):hover ~ .ship, .hover-area:nth-child(6):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(-40deg);
-}
-.hover-area:nth-child(7):hover ~ .ship, .hover-area:nth-child(7):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(-30deg);
-}
-.hover-area:nth-child(8):hover ~ .ship, .hover-area:nth-child(8):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(-20deg);
-}
-.hover-area:nth-child(9):hover ~ .ship, .hover-area:nth-child(9):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(-10deg);
-}
-.hover-area:nth-child(10):hover ~ .ship, .hover-area:nth-child(10):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(0deg);
-}
-.hover-area:nth-child(11):hover ~ .ship, .hover-area:nth-child(11):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(0deg);
-}
-.hover-area:nth-child(12):hover ~ .ship, .hover-area:nth-child(12):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(10deg);
-}
-.hover-area:nth-child(13):hover ~ .ship, .hover-area:nth-child(13):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(20deg);
-}
-.hover-area:nth-child(14):hover ~ .ship, .hover-area:nth-child(14):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(30deg);
-}
-.hover-area:nth-child(15):hover ~ .ship, .hover-area:nth-child(15):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(40deg);
-}
-.hover-area:nth-child(16):hover ~ .ship, .hover-area:nth-child(16):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(50deg);
-}
-.hover-area:nth-child(17):hover ~ .ship, .hover-area:nth-child(17):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(60deg);
-}
-.hover-area:nth-child(18):hover ~ .ship, .hover-area:nth-child(18):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(70deg);
-}
-.hover-area:nth-child(19):hover ~ .ship, .hover-area:nth-child(19):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(80deg);
-}
-.hover-area:nth-child(20):hover ~ .ship, .hover-area:nth-child(20):hover ~ .star-field {
-  transform: translate(-50%, -50%) rotate(90deg);
-}
-.hover-area:active ~ .star-field .stars-sm:before, .hover-area:active ~ .star-field .stars-sm:after {
-  animation-duration: calc(var(--stars-sm-speed) / 2);
-}
-.hover-area:active ~ .star-field .stars-sm:after {
-  animation-delay: calc(var(--stars-sm-speed) / -4);
-}
-.hover-area:active ~ .star-field .stars-md:before, .hover-area:active ~ .star-field .stars-md:after {
-  animation-duration: calc(var(--stars-md-speed) / 2);
-}
-.hover-area:active ~ .star-field .stars-md:after {
-  animation-delay: calc(var(--stars-md-speed) / -4);
-}
-.hover-area:active ~ .star-field .stars-lg:before, .hover-area:active ~ .star-field .stars-lg:after {
-  animation-duration: calc(var(--stars-lg-speed) / 2);
-}
-.hover-area:active ~ .star-field .stars-lg:after {
-  animation-delay: calc(var(--stars-lg-speed) / -4);
-}
-.hover-area:active ~ .ship .wrapper {
-  animation: speed-up-ship 80ms linear infinite alternate;
-}
-.hover-area:active ~ .ship .exhaust {
-  animation: speed-up-exhaust 80ms linear infinite alternate;
-}
 
 .ship .wrapper {
   display: flex;
@@ -306,22 +222,39 @@ body {
     transform: scaleX(0.98) translateY(-1vmin);
   }
 }
-@keyframes speed-up-exhaust {
-  from {
-    transform: scale(0.98, 1);
-  }
-  to {
-    transform: scale(0.96, 1.5);
-  }
+
+a, button{
+  position: absolute;
+  transform: translateX(-50%);
+  border: 1px solid white;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  padding: 0.5rem 0.9em;
+  background: #000000;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all .5s;
 }
-@keyframes speed-up-ship {
-  from {
-    transform: translateY(-5%);
-  }
-  to {
-    transform: translateY(-3%);
-  }
+
+a{
+  
+  bottom: 5%;
+  left: 15%;
+  text-decoration:none;
 }
+
+button {
+  bottom: 5%;
+  right: 0%;
+}
+
+a:hover, button:hover {
+  background: #ffffff;
+  color: #000000;
+}
+
 
 /*
     @ blink-stop v1.0
